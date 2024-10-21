@@ -1,0 +1,47 @@
+Notes on Java Collections Framework
+
+Introduction to Collections:
+Collections are objects that hold references to other objects, forming data structures.
+Elements within a collection are individual objects.
+Java’s collections framework provides interfaces, classes, and methods for managing aggregate data.
+
+Types of Collections:
+Set: No duplicates; unordered. Suitable for unique objects (e.g., a deck of cards).
+List: Ordered, allows duplicates (e.g., call history with repeated numbers).
+Queue: Ordered, follows FIFO (First-In-First-Out) for processing (e.g., supermarket checkout line).
+Map: Not a true collection; stores key-value pairs (e.g., bank transactions).
+
+Java.util Package:
+The collections framework resides in java.util.
+Collection is the root interface; no direct implementations but has derivatives like Set, List, and Queue.
+Each derivative has specific implementations, e.g., HashSet, ArrayList, and PriorityQueue.
+
+Set Interface:
+Characteristics: Unordered, unique elements.
+Example: Adding elements using add(). Duplicates are ignored, as shown when the size remains unchanged upon attempting to add a duplicate.
+Implementations: HashSet, LinkedHashSet.
+Key Methods: Inherited from Collection (e.g., add, remove, size).
+
+List Interface:
+Characteristics: Ordered; elements can be accessed by position and allow duplicates.
+Example: Using indexes (starts at 0) to access items. Duplicates remain stored.
+Implementations: ArrayList, LinkedList, Stack, and Vector.
+Additional Methods: get(int index), set(int index, E element) for element manipulation.
+
+Queue Interface:
+Characteristics: Ordered, duplicates allowed, FIFO processing.
+Example: Using remove() to dequeue the first element.
+Implementations: LinkedList, PriorityQueue.
+Additional Methods: offer(), poll(), peek() for managing the queue.
+
+Map Interface:
+Characteristics: Key-value pairs; keys must be unique but values can duplicate.
+Example: Adding entries using put(key, value). Updates occur when using a pre-existing key.
+Implementations: HashMap, TreeMap, LinkedHashMap.
+Additional Method: putIfAbsent() prevents overwriting entries.
+
+Immutable Collections:
+Using of() to create collections makes them immutable (no add() or remove() allowed).
+
+Looping Through Collections:
+The video hints at methods for looping through collection elements, which will be covered further.
